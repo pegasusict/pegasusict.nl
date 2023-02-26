@@ -1,0 +1,12 @@
+/*------------------------------------------------------------------
+    File Name: custom.css
+-------------------------------------------------------------------*/
+
+/** ADD YOUR AWESOME CODES HERE **/
+.peg_gradient {
+    background: rgb(153, 0, 0);
+    background: -moz-linear-gradient(330deg, rgba(153, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-linear-gradient(330deg, rgba(153, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(330deg, rgba(153, 0, 0, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#990000", endColorstr="#ffffff", GradientType=1);
+}
