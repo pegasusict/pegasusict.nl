@@ -4,7 +4,46 @@ $slides = [
     2 => ['a' => 'Vlot & Goedkoop', 'b' => 'Beschikbaar bij Pegasus ICT'],
     3 => ['a' => 'Reparaties', 'b' => 'Beschikbaar bij Pegasus ICT']
 ];
-
+$why_choose_me = [
+    0 => ['h' => 'Waarom mij kiezen', 'p' => 'Topservice tegen de allerlaagste prijzen!'],
+    1 => ['h' => 'Data Herstel', 'p' => 'Belangrijke Documenten, Photos etc.'],
+    2 => ['h' => 'Computer reparaties', 'p' => 'Geen voorrijkosten en geen onderzoekskosten'],
+    3 => ['h' => 'Mobiele service', 'p' => 'Reparatie, onderhoud van smartphones en tablets!'],
+    4 => ['h' => 'Netwerk oplossingen', 'p' => 'Installatie en Onderhoud van Netwerk(en) en Internet.'],
+];
+$accordion = [
+    1 => [
+        'h' => 'Data herstel harde schijven, geheugenkaarten en usbsticks.',
+        'p' => 'Verwijderde en beschadigde bestanden zijn in vele gevallen relatief makkelijk terug te halen van (beschadigde) interne en externe harde schijven, geheugenkaarten en usbsticks.'
+    ],
+    2 => [
+        'h' => 'Herstel foto\'s, afbeeldingen, video\'s en audio',
+        'p' => 'Bij data herstel is het mogelijk om op specefieke bestandstypen te zoeken, wat het proces flink versnelt.'
+    ],
+    3 => [
+        'h' => 'Herstellen van smartphones.',
+        'p' => 'Ook data op smartphones kan vaak nog hersteld worden.'
+    ],
+    4 => [
+        'h' => 'Voorlichting & cursussen',
+        'p' => 'Voorlichting en cursussen beschikbaaar over o.a. de volgende onderwerpen:
+                        <ul>
+                            <li>Veilig op internet</li>
+                            <li>Google Drive/Docs/Sheets/Photos</li>
+                            <li>Facebook</li>
+                            <li>html voor beginners</li>
+                            <li>PHP voor beginners</li>
+                            <li>Linux voor beginners/gevorderden</li>
+                            <li>Bash scripting voor beginners</li>
+                        </ul>'
+    ]
+];
+$service_process = [
+    0 => ['h' => 'Service Proces', 'p' => 'Makkelijk en effectief je apparaat laten repareren.'],
+    1 => ['h' => 'Vlotte service', 'p' => 'Korte wachttijden, service op locatie klaar terwijl u wacht.'],
+    2 => ['h' => 'Lage kosten', 'p' => 'Geen voorrijkosten en onderzoekskosten en een laagste prijs garantie. Heeft u sociale voorzieningen? Vraag naar de speciale korting!'],
+    3 => ['h' => '180 dagen garantie', 'p' => 'Indien reparaties en/of onderhoud gebreken blijkt te vertonen die (mogelijk) mijn schuld zijn, wordt dit kosteloos verholpen.'],
+];
 ?>
 <!-- section -->
 <div id="slider" class="section main_slider">
@@ -280,8 +319,8 @@ $slides = [
             <div class="col-md-12">
                 <div class="full">
                     <div class="main_heading text_align_center">
-                        <h2>Waarom mij kiezen</h2>
-                        <p class="large">Topservice tegen de allerlaagste prijzen!</p>
+                        <h2><?php echo $why_choose_me[0]['h']; ?></h2>
+                        <p class="large"><?php echo $why_choose_me[0]['p']; ?></p>
                     </div>
                 </div>
             </div>
@@ -292,8 +331,8 @@ $slides = [
                     <div class="center">
                         <div class="icon"><img src="../images/it_service/i1.png" alt="#"/></div>
                     </div>
-                    <h4 class="theme_color">Data Herstel</h4>
-                    <p>Belangrijke Documenten, Photos etc</p>
+                    <h4 class="theme_color"><?php echo $why_choose_me[1]['h']; ?></h4>
+                    <p><?php echo $why_choose_me[1]['p']; ?></p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -301,8 +340,8 @@ $slides = [
                     <div class="center">
                         <div class="icon"><img src="../images/it_service/i2.png" alt="#"/></div>
                     </div>
-                    <h4 class="theme_color">Computer reparaties</h4>
-                    <p>Geen voorrijkosten en geen onderzoekskosten</p>
+                    <h4 class="theme_color"><?php echo $why_choose_me[2]['h']; ?></h4>
+                    <p><?php echo $why_choose_me[2]['p']; ?></p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -310,8 +349,8 @@ $slides = [
                     <div class="center">
                         <div class="icon"><img src="../images/it_service/i3.png" alt="#"/></div>
                     </div>
-                    <h4 class="theme_color">Mobiele service</h4>
-                    <p>Reparatie, onderhoud van smartphones en tablets!</p>
+                    <h4 class="theme_color"><?php echo $why_choose_me[3]['h']; ?></h4>
+                    <p><?php echo $why_choose_me[3]['p']; ?></p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
@@ -319,8 +358,8 @@ $slides = [
                     <div class="center">
                         <div class="icon"><img src="../images/it_service/i4.png" alt="#"/></div>
                     </div>
-                    <h4 class="theme_color">Netwerk oplossingen</h4>
-                    <p>Installatie en Onderhoud van Netwerk(en) en Internet.</p>
+                    <h4 class="theme_color"><?php echo $why_choose_me[4]['h']; ?></h4>
+                    <p><?php echo $why_choose_me[4]['p']; ?></p>
                 </div>
             </div>
         </div>
@@ -335,16 +374,14 @@ $slides = [
                                         <p class="panel-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
                                                 <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                                                Data herstel harde schijven, geheugenkaarten en usbsticks.
+                                                <?php echo $accordion[1]['h'] ?>
                                                 <i class="fa fa-angle-down"></i>
                                             </a>
                                         </p>
                                     </div>
                                     <div id="collapseOne" class="panel-collapse collapse in">
                                         <div class="panel-body">
-                                            <p>Verwijderde en beschadigde bestanden zijn in vele gevallen relatief
-                                                makkelijk terug te halen van (beschadigde) interne en externe harde
-                                                schijven, geheugenkaarten en usbsticks.</p>
+                                            <p><?php echo $accordion[1]['p'] ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -353,27 +390,27 @@ $slides = [
                                         <p class="panel-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
                                                 <i class="fa fa-plane"></i>
-                                                Herstel foto's, afbeeldingen, video's en audio
+                                                <?php echo $accordion[2]['h'] ?>
                                                 <i class="fa fa-angle-down"></i>
                                             </a>
                                         </p>
                                     </div>
                                     <div id="collapseTwo" class="panel-collapse collapse">
                                         <div class="panel-body">
-                                            <p>Bij data herstel is het mogelijk om op specefieke bestandstypen te
-                                                zoeken, wat het proces flink versnelt.</p>
+                                            <p><?php echo $accordion[2]['p'] ?></p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
                                         <p class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
-                                                                  href="#collapseThree"><i class="fa fa-star"></i>Herstellen
-                                                van smartphones.<i class="fa fa-angle-down"></i></a></p>
+                                                                  href="#collapseThree"><i
+                                                        class="fa fa-star"></i><?php echo $accordion[3]['h'] ?><i
+                                                        class="fa fa-angle-down"></i></a></p>
                                     </div>
                                     <div id="collapseThree" class="panel-collapse collapse">
                                         <div class="panel-body">
-                                            <p>Ook data op smartphones kan vaak nog hersteld worden.</p>
+                                            <p><?php echo $accordion[3]['p'] ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -381,21 +418,12 @@ $slides = [
                                     <div class="panel-heading">
                                         <p class="panel-title"><a data-toggle="collapse" data-parent="#accordion"
                                                                   href="#collapseFour"><i class="fa fa-bar-chart"
-                                                                                          aria-hidden="true"></i>Voorlichting
-                                                & cursussen<i class="fa fa-angle-down"></i></a></p>
+                                                                                          aria-hidden="true"></i><?php echo $accordion[4]['h'] ?>
+                                                <i class="fa fa-angle-down"></i></a></p>
                                     </div>
                                     <div id="collapseFour" class="panel-collapse collapse in">
                                         <div class="panel-body">
-                                            <p>Voorlichting en cursussen beschikbaaar over o.a. de volgende onderwerpen:
-                                            <ul>
-                                                <li>Veilig op internet</li>
-                                                <li>Google Drive/Docs/Sheets/Photos</li>
-                                                <li>Facebook</li>
-                                                <li>html voor beginners</li>
-                                                <li>PHP voor beginners</li>
-                                                <li>Linux voor beginners/gevorderden</li>
-                                                <li>Bash scripting voor beginners</li>
-                                            </ul>
+                                            <p><?php echo $accordion[4]['p'] ?>
                                             </p>
                                         </div>
                                     </div>
@@ -416,8 +444,8 @@ $slides = [
             <div class="col-md-12">
                 <div class="full">
                     <div class="main_heading text_align_left">
-                        <h2>Service Proces</h2>
-                        <p class="large">Makkelijk en effectief je apparaat laten repareren.</p>
+                        <h2><?php echo $service_process[0]['h'] ?></h2>
+                        <p class="large"><?php echo $service_process[0]['p'] ?></p>
                     </div>
                 </div>
             </div>
@@ -430,8 +458,8 @@ $slides = [
                             <div class="service_blog_inner">
                                 <div class="icon text_align_left"><img src="../images/it_service/si1.png" alt="#"/>
                                 </div>
-                                <h4 class="service-heading">Vlotte service</h4>
-                                <p>Korte wachttijden, service op locatie klaar terwijl u wacht.</p>
+                                <h4 class="service-heading"><?php echo $service_process[1]['h'] ?></h4>
+                                <p><?php echo $service_process[1]['p'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -440,9 +468,8 @@ $slides = [
                             <div class="service_blog_inner">
                                 <div class="icon text_align_left"><img src="../images/it_service/si4.png" alt="#"/>
                                 </div>
-                                <h4 class="service-heading">Lage kosten</h4>
-                                <p>Geen voorrijkosten en onderzoekskosten en een laagste prijs garantie. Heeft u sociale
-                                    voorzieningen? Vraag naar de speciale korting!</p>
+                                <h4 class="service-heading"><?php echo $service_process[2]['h'] ?></h4>
+                                <p><?php echo $service_process[2]['p'] ?></p>
                             </div>
                         </div>
                     </div>
@@ -451,9 +478,8 @@ $slides = [
                             <div class="service_blog_inner">
                                 <div class="icon text_align_left"><img src="../images/it_service/si5.png" alt="#"/>
                                 </div>
-                                <h4 class="service-heading">180 dagen garantie</h4>
-                                <p>Indien reparaties en/of onderhoud gebreken blijkt te vertonen die (mogelijk) mijn
-                                    schuld zijn, wordt dit kosteloos verholpen.</p>
+                                <h4 class="service-heading"><?php echo $service_process[3]['h'] ?></h4>
+                                <p><?php echo $service_process[3]['p'] ?></p>
                             </div>
                         </div>
                     </div>

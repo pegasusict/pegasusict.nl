@@ -20,7 +20,7 @@ $pages = [
     'faq' => ['en' => 'FAQ', 'nl' => 'Vraag & Antwoord'],
     'index' => ['en' => 'Home', 'nl' => 'Home'],
     'mob_svc' => ['en' => 'Mobile Service', 'nl' => 'Mobiele Service'],
-    'netw_sol' => ['en' => 'Internet / Network Solutions', 'nl' => 'Internet / Netwerk Oplossingen'],
+    'net_sol' => ['en' => 'Internet / Network Solutions', 'nl' => 'Internet / Netwerk Oplossingen'],
     'priv_pol' => ['en' => 'Privacy Policy', 'nl' => 'Privacy Beleid'],
     'svc' => ['en' => 'Service', 'nl' => 'Service'],
     'tech_supp' => ['en' => 'Technical Support', 'nl' => 'Technische Ondersteuning'],
@@ -118,13 +118,13 @@ function menu_button($target, $index, $lang, $default_class = "btn white_btn")
     <div class="header_bottom">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
                     <!-- logo start -->
                     <div class="logo"><a href="/?lang=<?php echo $lang; ?>"><img src="images/logos/logo.png"
                                                                                  alt="logo"/></a></div>
                     <!-- logo end -->
                 </div>
-                <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12">
                     <!-- menu start -->
                     <div class="menu_side">
                         <div id="navbar_menu">
@@ -146,8 +146,11 @@ function menu_button($target, $index, $lang, $default_class = "btn white_btn")
     <!-- header bottom end -->
 </header>
 <!-- end header -->
-<?php require_once('pages' . DIRECTORY_SEPARATOR . $page . '.' . $lang . $page_ext) ?>
-<?php require_once('pages' . DIRECTORY_SEPARATOR . 'footer.' . $lang . $page_ext) ?>
+<?php
+if ('index' !== $page) require_once('..' . DIRECTORY_SEPARATOR . 'inner_banner.' . $page_ext);
+require_once('pages' . DIRECTORY_SEPARATOR . $page . '.' . $lang . $page_ext);
+require_once('pages' . DIRECTORY_SEPARATOR . 'footer.' . $lang . $page_ext);
+?>
 <!-- js section -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

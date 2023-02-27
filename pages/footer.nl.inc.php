@@ -2,20 +2,19 @@
 <footer class="footer_style_2">
     <div class="container-fuild">
         <div class="row">
-            <div class="map_section">
-                <div id="map"></div>
-            </div>
+            <!--            <div class="map_section">-->
+            <!--                <div id="map"></div>-->
+            <!--            </div>-->
             <div class="footer_blog">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="main-heading left_text">
                             <h2>Online bereikbaar</h2>
                         </div>
-                        <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices,
-                            dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
+                        <p></p>
                         <ul class="social_icons">
                             <li class="social-icon fb"><a href="https://facebook.com/pegasusict"><i
-                                            class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                        class="fa fa-facebook" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                     <div class="col-md-6">

@@ -2,17 +2,16 @@
 <footer class="footer_style_2">
     <div class="container-fuild">
         <div class="row">
-            <div class="map_section">
-                <div id="map"></div>
-            </div>
+            <!--            <div class="map_section">-->
+            <!--                <div id="map"></div>-->
+            <!--            </div>-->
             <div class="footer_blog">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="main-heading left_text">
-                            <h2>Online bereikbaar</h2>
+                            <h2>Online Availability</h2>
                         </div>
-                        <p>Tincidunt elit magnis nulla facilisis. Dolor sagittis maecenas. Sapien nunc amet ultrices,
-                            dolores sit ipsum velit purus aliquet, massa fringilla leo orci.</p>
+                        <p></p>
                         <ul class="social_icons">
                             <li class="social-icon fb"><a href="https://facebook.com/pegasusict"><i
                                         class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -23,12 +22,17 @@
                             <h2>Additional links</h2>
                         </div>
                         <ul class="footer-menu">
-                            <li><a href="about.nl.inc.php"><i class="fa fa-angle-right"></i> About me</a></li>
-                            <li><a href="it_term_condition.html"><i class="fa fa-angle-right"></i> Terms and conditions</a>
+                            <li><a href="?lang=<?= $lang ?>&page=about"><i
+                                        class="fa fa-angle-right"></i><?php echo $pages['about'][$lang] ?></a></li>
+                            <li><a href="?lang=<?= $lang ?>&page=term_cond"><i
+                                        class="fa fa-angle-right"></i><?php echo $pages['term_cond'][$lang] ?></a>
                             </li>
-                            <li><a href="it_privacy_policy.html"><i class="fa fa-angle-right"></i> Privacy policy</a>
+                            <li><a href="?lang=<?= $lang ?>&page=priv_pol"><i
+                                        class="fa fa-angle-right"></i><?php echo $pages['priv_pol'][$lang] ?></a>
                             </li>
-                            <li><a href="it_contact.html"><i class="fa fa-angle-right"></i> Contact us</a></li>
+                            <li><a href="?lang=<?= $lang ?>&page=contact"><i
+                                        class="fa fa-angle-right"></i><?php echo $pages['contact'][$lang] ?></a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-6">
@@ -36,175 +40,37 @@
                             <h2>Services</h2>
                         </div>
                         <ul class="footer-menu">
-                            <li><a href="it_data_recovery.html"><i class="fa fa-angle-right"></i> Data recovery</a></li>
-                            <li><a href="it_computer_repair.html"><i class="fa fa-angle-right"></i> Computer repair</a>
+                            <li><a href="?lang=<?= $lang ?>&page=data_rec"><i
+                                        class="fa fa-angle-right"></i><?php echo $pages['data_rec'][$lang] ?></a>
                             </li>
-                            <li><a href="it_mobile_service.html"><i class="fa fa-angle-right"></i> Mobile service</a>
+                            <li><a href="?lang=<?= $lang ?>&page=comp_rep"><i
+                                        class="fa fa-angle-right"></i><?php echo $pages['comp_rep'][$lang] ?></a>
                             </li>
-                            <li><a href="it_network_solution.html"><i class="fa fa-angle-right"></i> Network
-                                    solutions</a></li>
-                            <li><a href="it_techn_support.html"><i class="fa fa-angle-right"></i> Technical support</a>
+                            <li><a href="?lang=<?= $lang ?>&page=mob_svc"><i
+                                        class="fa fa-angle-right"></i><?php echo $pages['mob_svc'][$lang] ?></a>
+                            </li>
+                            <li><a href="?lang=<?= $lang ?>&page=netw_sol"><i
+                                        class="fa fa-angle-right"></i><?php echo $pages['netw_sol'][$lang] ?></a>
+                            </li>
+                            <li><a href="?lang=<?= $lang ?>&page=tech_supp"><i
+                                        class="fa fa-angle-right"></i><?php echo $pages['tech_supp'][$lang] ?></a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-md-6">
                         <div class="main-heading left_text">
-                            <h2>Contact us</h2>
+                            <h2>Contact</h2>
                         </div>
-                        <p>123 Second Street Fifth Avenue,<br>
-                            Manhattan, New York<br>
-                            <span style="font-size:18px;"><a href="tel:+9876543210">+987 654 3210</a></span></p>
-                        <div class="footer_mail-section">
-                            <form>
-                                <fieldset>
-                                    <div class="field">
-                                        <input placeholder="Email" type="text">
-                                        <button class="button_custom"><i class="fa fa-envelope" aria-hidden="true"></i>
-                                        </button>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
+                        <p>Pieter Floriszstraat 31<br>
+                            2404 AA Alphen aan den Rijn<br>
+                            <span style="font-size:18px;"><a href="tel:+31612367784">+31(0)6 - 1236 7784</a></span></p>
                     </div>
                 </div>
             </div>
             <div class="cprt">
-                <p>© Copyright 2023 Ontwerp door Pegasus ICT</p>
+                <p>© Copyright 2023 Design by Pegasus ICT</p>
             </div>
         </div>
     </div>
 </footer>
 <!-- end footer -->
-<!-- js section -->
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<!-- menu js -->
-<script src="../js/menumaker.js"></script>
-<!-- wow animation -->
-<script src="../js/wow.js"></script>
-<!-- custom js -->
-<script src="../js/custom.js"></script>
-<!-- revolution js files -->
-<script src="../revolution/js/jquery.themepunch.tools.min.js"></script>
-<script src="../revolution/js/jquery.themepunch.revolution.min.js"></script>
-<script src="../revolution/js/extensions/revolution.extension.actions.min.js"></script>
-<script src="../revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-<script src="../revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-<script src="../revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-<script src="../revolution/js/extensions/revolution.extension.migration.min.js"></script>
-<script src="../revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-<script src="../revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-<script src="../revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-<script src="../revolution/js/extensions/revolution.extension.video.min.js"></script>
-<!-- map js -->
-<script>
-    // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-    // Australia.
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 11,
-            center: {lat: 40.645037, lng: -73.880224},
-            styles: [
-                {
-                    elementType: 'geometry',
-                    stylers: [{color: '#fefefe'}]
-                },
-                {
-                    elementType: 'labels.icon',
-                    stylers: [{visibility: 'off'}]
-                },
-                {
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#616161'}]
-                },
-                {
-                    elementType: 'labels.text.stroke',
-                    stylers: [{color: '#f5f5f5'}]
-                },
-                {
-                    featureType: 'administrative.land_parcel',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#bdbdbd'}]
-                },
-                {
-                    featureType: 'poi',
-                    elementType: 'geometry',
-                    stylers: [{color: '#eeeeee'}]
-                },
-                {
-                    featureType: 'poi',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#757575'}]
-                },
-                {
-                    featureType: 'poi.park',
-                    elementType: 'geometry',
-                    stylers: [{color: '#e5e5e5'}]
-                },
-                {
-                    featureType: 'poi.park',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#9e9e9e'}]
-                },
-                {
-                    featureType: 'road',
-                    elementType: 'geometry',
-                    stylers: [{color: '#eee'}]
-                },
-                {
-                    featureType: 'road.arterial',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#3d3523'}]
-                },
-                {
-                    featureType: 'road.highway',
-                    elementType: 'geometry',
-                    stylers: [{color: '#eee'}]
-                },
-                {
-                    featureType: 'road.highway',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#616161'}]
-                },
-                {
-                    featureType: 'road.local',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#9e9e9e'}]
-                },
-                {
-                    featureType: 'transit.line',
-                    elementType: 'geometry',
-                    stylers: [{color: '#e5e5e5'}]
-                },
-                {
-                    featureType: 'transit.station',
-                    elementType: 'geometry',
-                    stylers: [{color: '#000'}]
-                },
-                {
-                    featureType: 'water',
-                    elementType: 'geometry',
-                    stylers: [{color: '#c8d7d4'}]
-                },
-                {
-                    featureType: 'water',
-                    elementType: 'labels.text.fill',
-                    stylers: [{color: '#b1a481'}]
-                }
-            ]
-        });
-
-        var image = 'images/it_service/location_icon_map_cont.png';
-        var beachMarker = new google.maps.Marker({
-            position: {lat: 40.645037, lng: -73.880224},
-            map: map,
-            icon: image
-        });
-    }
-</script>
-<!-- google map js -->
-<script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-<!-- end google map js -->
-</body>
-</html>
