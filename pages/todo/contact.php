@@ -9,7 +9,7 @@ function isEmail($email)
 }
 
 if (!defined("PHP_EOL")) define("PHP_EOL", "\r\n");
-$position_post = $_POST['position_post']
+$position_post = $_POST['position_post'];
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $email = $_POST['email'];
@@ -18,14 +18,15 @@ $comments = $_POST['comments'];
 if (trim($first_name) == '') {
     echo '<div class="error_message">Attention! You must enter your name.</div>';
     exit();
-} else if (trim($email) == '') {
+}
+if (trim($email) == '') {
     echo '<div class="error_message">Attention! Please enter a valid email address.</div>';
     exit();
-} else if (!isEmail($email)) {
+}
+if (!isEmail($email)) {
     echo '<div class="error_message">Attention! You have enter an invalid e-mail address, try again.</div>';
     exit();
 }
-
 if (trim($comments) == '') {
     echo '<div class="error_message">Attention! Please enter your message.</div>';
     exit();
@@ -41,7 +42,7 @@ if (get_magic_quotes_gpc()) {
 // Example $address = "joe.doe@yourdomain.com";
 
 //$address = "example@themeforest.net";
-$address = "example@yourdomain.com";
+$address = "pegasus.ict@gmail.com";
 
 
 // Configuration option.
@@ -56,7 +57,7 @@ $e_subject = 'You\'ve been contacted by ' . $first_name . '.';
 // You can change this if you feel that you need to.
 // Developers, you may wish to add more fields to the form, in which case you must be sure to add them here.
 
-$e_body = "You have been contacted by $first_name. $first_name selected service of $select_service, their additional message is as follows. Customer max budge is $select_price, for this project." . PHP_EOL . PHP_EOL;
+$e_body = "You have been contacted by $first_name. $first_name
 $e_content = "\"$comments\"" . PHP_EOL . PHP_EOL;
 $e_reply = "You can contact $first_name via email, $email or via phone $phone";
 

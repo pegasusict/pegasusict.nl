@@ -1,7 +1,17 @@
 <?php
 ## language selection
-$lang = 'en';
+$languages = ['en', 'nl'];
+$lang_names = ['en' => 'English', 'nl' => 'Nederlands'];
+$lang = $languages[0];
 if (array_key_exists('lang', $_GET) && $_GET['lang'] === 'nl') $lang = 'nl';
+function lang_buttons($curr_page, $curr_lang, $langs, $langnames)
+{
+    foreach ($langs as $lang) {
+        if ($lang !== $curr_lang) {
+            echo '<div class="make_appo"><a class="btn white_btn" href="?lang=' . $lang . '&page=' . $curr_page . '">' . $langnames[$lang] . '</a></div>' . "\n";
+        }
+    }
+}
 
 $title_en = "Pegasus ICT Services";
 $title_nl = "Pegasus ICT Dienstverlening";
@@ -32,7 +42,10 @@ if (array_key_exists('page', $_GET) && array_key_exists($_GET['page'], $pages)) 
 
 function menu_button($target, $index, $lang, $default_class = "btn white_btn")
 {
-    $class = (array_key_exists($target, $index) && ($target === $_GET['page'])) ? "active" : $default_class;
+    $page = 'index';
+    if (array_key_exists('page', $_GET) && array_key_exists($_GET['page'], $index)) $page = $_GET['page'];
+
+    $class = (array_key_exists($target, $index) && ($target === $page)) ? "active" : $default_class;
     echo '<a class="' . $class . '" href="?lang=' . $lang . '&page=' . $target . '">' . $index[$target][$lang] . '</a>';
 }
 
@@ -60,8 +73,6 @@ function menu_button($target, $index, $lang, $default_class = "btn white_btn")
     <link rel="stylesheet" href="css/style.css"/>
     <!-- responsive css -->
     <link rel="stylesheet" href="css/responsive.css"/>
-    <!-- colors css -->
-    <link rel="stylesheet" href="css/colors1.css"/>
     <!-- custom css -->
     <link rel="stylesheet" href="css/custom.css"/>
     <!-- wow Animation css -->
@@ -70,6 +81,8 @@ function menu_button($target, $index, $lang, $default_class = "btn white_btn")
     <link rel="stylesheet" type="text/css" href="revolution/css/settings.css"/>
     <link rel="stylesheet" type="text/css" href="revolution/css/layers.css"/>
     <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css"/>
+    <!-- colors css -->
+    <link rel="stylesheet" href="css/colors1.css"/>
 </head>
 <body id="default_theme" class="it_service">
 <!-- loader -->
@@ -85,11 +98,20 @@ function menu_button($target, $index, $lang, $default_class = "btn white_btn")
                     <div class="full">
                         <div class="topbar-left">
                             <ul class="list-inline">
-                                <li><span class="topbar-label"><i class="fa  fa-home"></i></span> <span
-                                            class="topbar-hightlight">Pieter Floriszstraat 31, Alphen aan den Rijn</span>
-                                </li>
-                                <li><span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span
-                                            class="topbar-hightlight"><a href="mailto:info@pegasus-ict.nl">info@pegasus-ict.nl</a></span>
+                                <!--                                <li>
+                                                                    <span class="topbar-label">
+                                                                        <i class="fa  fa-home"></i>
+                                                                    </span>
+                                                                    <span class="topbar-hightlight">
+                                                                    </span>
+                                                                </li>-->
+                                <li>
+                                    <span class="topbar-label">
+                                        <i class="fa fa-envelope-o"></i>
+                                    </span>
+                                    <span class="topbar-hightlight">
+                                        <a href="mailto:pegasus.ict@gmail.com">pegasus.ict@gmail.com</a>
+                                    </span>
                                 </li>
                             </ul>
                         </div>
@@ -108,6 +130,7 @@ function menu_button($target, $index, $lang, $default_class = "btn white_btn")
                         <div class="make_appo"><a class="btn white_btn"
                                                   href="?lang=<?= $lang ?>&page=contact"><?php echo $pages['contact'][$lang] ?></a>
                         </div>
+                        <?php lang_buttons($page, $lang, $languages, $lang_names); ?>
                     </div>
                 </div>
             </div>
@@ -147,9 +170,14 @@ function menu_button($target, $index, $lang, $default_class = "btn white_btn")
 </header>
 <!-- end header -->
 <?php
-if ('index' !== $page) require_once('..' . DIRECTORY_SEPARATOR . 'inner_banner.' . $page_ext);
-require_once('pages' . DIRECTORY_SEPARATOR . $page . '.' . $lang . $page_ext);
-require_once('pages' . DIRECTORY_SEPARATOR . 'footer.' . $lang . $page_ext);
+if ('index' !== $page) require_once('inner_banner' . $page_ext);
+$page_file = 'pages' . DIRECTORY_SEPARATOR . $page . '.' . $lang . $page_ext;
+if (is_file($page_file)) {
+    require_once($page_file);
+} else {
+    require_once('pages' . DIRECTORY_SEPARATOR . 'constr.' . $lang . $page_ext);
+}
+require_once('footer.' . $lang . $page_ext);
 ?>
 <!-- js section -->
 <script src="js/jquery.min.js"></script>

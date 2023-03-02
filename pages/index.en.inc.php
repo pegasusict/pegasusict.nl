@@ -5,7 +5,7 @@ $slides = [
     3 => ['a' => 'Repairs', 'b' => 'Available at Pegasus ICT']
 ];
 $why_choose_me = [
-    0 => ['h' => 'Why Choose Me', 'p' => 'Topservice tegen de allerlaagste prijzen!'],
+    0 => ['h' => 'Why Choose Me', 'p' => 'Topservice at the lowest cost!'],
     1 => ['h' => 'Data Reccovery', 'p' => 'Important Documents, Photos etc.'],
     2 => ['h' => 'Computer Repairs', 'p' => 'No call-out costs and no diagnostics costs'],
     3 => ['h' => 'Mobile Service', 'p' => 'Repairs, Maintenance of smartphones and tablets!'],
@@ -41,7 +41,7 @@ $accordion = [
 $service_process = [
     0 => ['h' => 'Service Process', 'p' => 'Easy and effective having your device repaired.'],
     1 => ['h' => 'Swift Service', 'p' => 'Short waiting list, service on location ready while you\'re waiting.'],
-    2 => ['h' => 'Lage cost', 'p' => 'No call-out costs, no diagnostics costs and lowest price guaranty. Are you on benefits? Ask for the special discount!'],
+    2 => ['h' => 'Low cost', 'p' => 'No call-out costs, no diagnostics costs and lowest price guaranty. Are you on benefits? Ask for the special discount!'],
     3 => ['h' => '180 days guaranty', 'p' => 'If repairs and/or maintenance appears to be lacking which can possible be my fault, it will be fixed free of charge.'],
 ];
 ?>
@@ -60,7 +60,7 @@ $service_process = [
                             data-thumb="images/it_service/slide1.jpg" data-rotate="0" data-saveperformance="off"
                             data-title="Computer Services" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="../images/it_service/slide1.jpg" alt="#" data-bgposition="center center"
+                            <img src="images/it_service/slide1.jpg" alt="#" data-bgposition="center center"
                                  data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone"
                                  data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0"
                                  data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg"
@@ -143,7 +143,7 @@ $service_process = [
                             data-thumb="images/it_service/slide2.jpg" data-rotate="0" data-saveperformance="off"
                             data-title="Easy To Use & Customize" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="../images/it_service/slide2.jpg" alt="" data-bgposition="center center"
+                            <img src="images/it_service/slide2.jpg" alt="" data-bgposition="center center"
                                  data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone"
                                  data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0"
                                  data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg"
@@ -226,7 +226,7 @@ $service_process = [
                             data-thumb="images/it_service/slide3.jpg" data-rotate="0" data-saveperformance="off"
                             data-title="Perfectly Responsive" data-description="">
                             <!-- MAIN IMAGE -->
-                            <img src="../images/it_service/slide3.jpg" alt="" data-bgposition="center center"
+                            <img src="images/it_service/slide3.jpg" alt="" data-bgposition="center center"
                                  data-kenburns="on" data-duration="30000" data-ease="Linear.easeNone"
                                  data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0"
                                  data-offsetstart="0 0" data-offsetend="0 0" data-bgparallax="10" class="rev-slidebg"
@@ -329,7 +329,7 @@ $service_process = [
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="full text_align_center margin_bottom_30">
                     <div class="center">
-                        <div class="icon"><img src="../images/it_service/i1.png" alt="#"/></div>
+                        <div class="icon"><img src="images/it_service/i1.png" alt="#"/></div>
                     </div>
                     <h4 class="theme_color"><?php echo $why_choose_me[1]['h']; ?></h4>
                     <p><?php echo $why_choose_me[1]['p']; ?></p>
@@ -338,7 +338,7 @@ $service_process = [
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="full text_align_center margin_bottom_30">
                     <div class="center">
-                        <div class="icon"><img src="../images/it_service/i2.png" alt="#"/></div>
+                        <div class="icon"><img src="images/it_service/i2.png" alt="#"/></div>
                     </div>
                     <h4 class="theme_color"><?php echo $why_choose_me[2]['h']; ?></h4>
                     <p><?php echo $why_choose_me[2]['p']; ?></p>
@@ -347,7 +347,7 @@ $service_process = [
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="full text_align_center margin_bottom_30">
                     <div class="center">
-                        <div class="icon"><img src="../images/it_service/i3.png" alt="#"/></div>
+                        <div class="icon"><img src="images/it_service/i3.png" alt="#"/></div>
                     </div>
                     <h4 class="theme_color"><?php echo $why_choose_me[3]['h']; ?></h4>
                     <p><?php echo $why_choose_me[3]['p']; ?></p>
@@ -356,7 +356,7 @@ $service_process = [
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
                 <div class="full text_align_center margin_bottom_30 margin_0">
                     <div class="center">
-                        <div class="icon"><img src="../images/it_service/i4.png" alt="#"/></div>
+                        <div class="icon"><img src="images/it_service/i4.png" alt="#"/></div>
                     </div>
                     <h4 class="theme_color"><?php echo $why_choose_me[4]['h']; ?></h4>
                     <p><?php echo $why_choose_me[4]['p']; ?></p>
@@ -456,7 +456,7 @@ $service_process = [
                     <div class="col-md-4">
                         <div class="full">
                             <div class="service_blog_inner">
-                                <div class="icon text_align_left"><img src="../images/it_service/si1.png" alt="#"/>
+                                <div class="icon text_align_left"><img src="images/it_service/si1.png" alt="#"/>
                                 </div>
                                 <h4 class="service-heading"><?php echo $service_process[1]['h'] ?></h4>
                                 <p><?php echo $service_process[1]['p'] ?></p>
@@ -466,7 +466,7 @@ $service_process = [
                     <div class="col-md-4">
                         <div class="full">
                             <div class="service_blog_inner">
-                                <div class="icon text_align_left"><img src="../images/it_service/si4.png" alt="#"/>
+                                <div class="icon text_align_left"><img src="images/it_service/si4.png" alt="#"/>
                                 </div>
                                 <h4 class="service-heading"><?php echo $service_process[2]['h'] ?></h4>
                                 <p><?php echo $service_process[2]['p'] ?></p>
@@ -476,7 +476,7 @@ $service_process = [
                     <div class="col-md-4">
                         <div class="full">
                             <div class="service_blog_inner">
-                                <div class="icon text_align_left"><img src="../images/it_service/si5.png" alt="#"/>
+                                <div class="icon text_align_left"><img src="images/it_service/si5.png" alt="#"/>
                                 </div>
                                 <h4 class="service-heading"><?php echo $service_process[3]['h'] ?></h4>
                                 <p><?php echo $service_process[3]['p'] ?></p>

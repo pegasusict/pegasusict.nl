@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*------------------------------------------------------------------
     File Name: animate.css  
 -------------------------------------------------------------------*/
@@ -5,7 +6,6 @@
 
 /*== Animation css ==*/
 
-@charset "UTF-8";
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
